@@ -4,12 +4,22 @@ using Microsoft.AspNetCore.Mvc;
 using shopapp.webui.Data;
 using e_commerce.Models;
 using e_commerce.ViewModels;
+using ecommerce.data.Abstract;
 
 namespace e_commerce.Controllers
 {
-    // localhost:5000/home
+
+    
     public class HomeController : Controller
     {
+        private IProductRepository _productRepository;
+
+        public HomeController(IProductRepository productRepository)
+
+        {
+            this._productRepository=productRepository;
+        }
+
         public IActionResult Index()
         {
 

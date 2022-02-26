@@ -9,6 +9,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using ecommerce.data.Abstract;
+using ecommerce.data.Concrete.EFCore;
 
 
 
@@ -22,6 +24,7 @@ namespace e_commerce
         {
             // mvc
             // razor pages
+            services.AddScoped<IProductRepository, EfCoreProductRepository>();
             services.AddControllersWithViews();
         }
 
