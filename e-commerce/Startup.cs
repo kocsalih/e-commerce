@@ -33,12 +33,13 @@ namespace e_commerce
         {
             app.UseStaticFiles(); // wwwroot
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
-                RequestPath = "/modules"
-            });
+            //TODO:SiteYüklenmeden önce statik dosyalarý yükle
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //        Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+            //    RequestPath = "/modules"
+            //});
 
             if (env.IsDevelopment())
             {
