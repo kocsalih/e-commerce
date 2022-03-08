@@ -9,7 +9,6 @@ using e_commerce.Models;
 using shopapp.webui.Data;
 using e_commerce.ViewModels;
 
-
 namespace e_commerce.Controllers
 {
     public class ProductController : Controller
@@ -69,6 +68,7 @@ namespace e_commerce.Controllers
             return View(p);
         }
 
+
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -76,12 +76,14 @@ namespace e_commerce.Controllers
             return View(ProductRepository.GetProductById(id));
         }
 
+
         [HttpPost]
         public IActionResult Edit(Product p)
         {
             ProductRepository.EditProduct(p);
             return RedirectToAction("list");
         }
+
 
         [HttpPost]
         public IActionResult Delete(int ProductId)
