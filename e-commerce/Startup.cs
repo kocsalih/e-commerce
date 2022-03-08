@@ -12,8 +12,6 @@ using System.IO;
 using ecommerce.data.Abstract;
 using ecommerce.data.Concrete.EFCore;
 
-
-
 namespace e_commerce
 {
     public class Startup
@@ -33,7 +31,7 @@ namespace e_commerce
         {
             app.UseStaticFiles(); // wwwroot
 
-            //TODO:SiteYüklenmeden önce statik dosyalarý yükle
+            //TODO:SiteYÃ¼klenmeden Ã¶nce statik dosyalarÃ½ yÃ¼kle
             //app.UseStaticFiles(new StaticFileOptions
             //{
             //    FileProvider = new PhysicalFileProvider(
@@ -45,7 +43,6 @@ namespace e_commerce
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseRouting();
 
             // localhost:5000
